@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "graphql-front-end-dev-20190830133004-authRole",
+            "UnauthRoleArn": "arn:aws:iam::971182425563:role/graphql-front-end-dev-20190830133004-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::971182425563:role/graphql-front-end-dev-20190830133004-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "graphql-front-end-dev-20190830133004-deployment",
+            "UnauthRoleName": "graphql-front-end-dev-20190830133004-unauthRole",
+            "StackName": "graphql-front-end-dev-20190830133004",
+            "StackId": "arn:aws:cloudformation:us-west-2:971182425563:stack/graphql-front-end-dev-20190830133004/f3804a30-cb64-11e9-85cc-0a95c68a7df8"
+        }
+    }
+}

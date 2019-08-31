@@ -1,0 +1,41 @@
+type Hello {
+  message: String!
+}
+
+type Employee {
+  name: String
+  id: ID!
+  role: String!
+}
+
+input PutEmployeeInput {
+  name: String!
+  role: String!
+}
+
+type DynamoDBResponse {
+  items: [Employee]
+  scannedCount: Int!,
+  nextToken: String
+}
+
+type Query {
+  Hello: Hello!
+  listEmployees: DynamoDBResponse
+  getEmployee(id: ID): Employee 
+}
+
+type Mutation {
+  putEmployee(input: PutEmployeeInput): Employee
+}
+
+type Subscription {
+  newEmployee: Employee
+  @aws_subscribe(mutations: ["putEmployee"])
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
